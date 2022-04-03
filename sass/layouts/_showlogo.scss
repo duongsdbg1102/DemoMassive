@@ -1,0 +1,11 @@
+.showlogo{
+    .container{
+      max-width: 1170px;
+    }
+    .showlogo__content{
+        padding: 0 $pd-30;
+        .showlogo__item{
+            margin: $mg-20;
+        }
+    }
+}

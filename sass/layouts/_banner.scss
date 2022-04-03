@@ -1,0 +1,116 @@
+.banner {
+    background-image: url(../img/4.jpg);
+    @extend %styleBackgroud;
+    height: 200%;
+    width: 100%;
+    position: relative;
+    .banner__dark {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background-color: $color-gray-3;
+        top: 0;
+        right: 0;
+    }
+    .banner__content {
+        .col-6 {
+            padding: 0 $pd-30;
+        }
+        .banner__left {
+            text-align: center;
+
+            h3 {
+                margin: 190px 0;
+
+                @include styleText($color-white-0, $fs-24, $fw-0);
+
+                letter-spacing: $lt-6;
+            }
+        }
+        .banner__right {
+            padding: 0 $pd-30;
+            h4 {
+                @include styleText($color-white-0, $fs-18, $fw-0);
+                letter-spacing: $lt-2;
+                margin-bottom: $mg-30;
+            }
+            p {
+                color: $color-white-0;
+                margin-bottom: $mg-30;
+                line-height: $lh-30;
+            }
+            .banner__skill {
+                padding-top: $pd-30;
+
+                .progress {
+                    overflow: visible;
+                    height: 20px;
+                    background: $color-black-7;
+                    border-radius: 0;
+                    margin: $mg-10 0 $mg-50 0;
+                    .progress-bar {
+                        position: relative;
+                        overflow: visible;
+                        text-align: left;
+                        padding-left: $pd-10;
+                        background-color: $color-black-7;
+                        letter-spacing: $lt-2 - 1;
+                        line-height: $lh-25 - 5;
+                        .progress-title {
+                            @include styleText($color-black-1, $fs-10, $fw-4);
+                            line-height: $lh-25 - 5;
+                            margin: 0;
+                        }
+                        span {
+                            position: absolute;
+                            top: -55px;
+                            right: -12px;
+                            min-width: 25px;
+                            height: 20px;
+                            padding: 0 $pd-10 - 2;
+                            text-align: center;
+                            letter-spacing: 0;
+                            border-radius: 30px;
+                            line-height: $lh-25 - 5;
+
+                            background-color: $color-white-4;
+
+                            @include styleText($color-black-2, $fs-10, $fw-0);
+                            &::after {
+                                position: absolute;
+                                bottom: -9px;
+                                left: 12px;
+                                content: "";
+                                @include styleTriangle($color-white-4, $sizeTriangle-0);
+                            }
+                        }
+                        .ab-progress-bar {
+                            top: 0;
+                            left: 0;
+                            position: absolute;
+                            height: 20px;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Responsive
+
+@include responsive("width-800") {
+    .banner {
+        .banner__dark {
+            display: none;
+        }
+        .banner__content {
+            .banner__left {
+                h3 {
+                    font-size: $fs-18;
+                }
+            }
+        }
+    }
+}

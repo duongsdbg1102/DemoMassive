@@ -1,0 +1,82 @@
+.creative {
+    .creative__content {
+        text-align: center;
+        .title {
+            p{
+            width: 57%;
+        }}
+
+        
+            .creative__col {
+                padding: 0 $pd-30;
+                .creative__item {
+                    position: relative;
+                    padding: $pd-30;
+                    border: 1px solid $color-white-2;
+                    border-radius: 4px;
+
+                    .creative__icon {
+                        position: absolute;
+                        top: -30px;
+                        left: 30px;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 4px;
+                        background-color: $color-black-2;
+                        box-shadow: 0 0 0 10px $color-white-0;
+                        line-height: $lh-60;
+                        transition: 0.3s;
+                        i {
+                            @include styleText($color-white-0, $fs-30, $fw-6);
+                            line-height: $lh-60;
+                        }
+                    }
+                    .creative__text {
+                        text-align: left;
+                        margin-top: $mg-30;
+                        h4 {
+                            margin-bottom: $mg-20;
+                            @include styleText($color-black-0, $fs-18, $fw-0);
+                            letter-spacing: $lt-2 - 1;
+                        }
+                        p {
+                            color: $color-white-1;
+                            margin: 0;
+                        }
+                    }
+                    &:hover {
+                        .creative__icon {
+                            background-color: $color-yellow-0;
+                        }
+                    }
+                }
+            }
+        
+    }
+}
+
+//responsive
+
+
+@include responsive("width-800") {
+    .creative {
+        .creative__content {
+          
+         .creative__item{
+             margin-bottom: $mg-50;
+         }   
+        
+        }
+    }
+}
+@include responsive("medium") {
+    .creative {
+        .creative__content {
+            .title {
+                p {
+                    width: 86%;
+                }
+            }
+        }
+    }
+}

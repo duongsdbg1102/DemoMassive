@@ -1,0 +1,114 @@
+.blog {
+    .title {
+        margin-bottom: $mg-100;
+        p {
+            width: 60%;
+        }
+    }
+    .blog__content {
+        .blog__left{
+            position: relative;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        
+        .blog__overlay{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color:$color-gray-3 ;
+                padding: $pd-10;
+            p{
+                margin: 0;
+                color: $color-white-0;
+
+            }
+        }
+    }
+        a{
+            text-decoration: none;
+            @include styleText($color-black-8, $fs-13 - 1, $fw-4);
+            transition: all .3s;
+            letter-spacing: $lt-2 - 1;
+            &:hover{
+                color: $color-yellow-0;
+            }
+        }
+        .blog__col {
+            padding: 0 $pd-30;
+        }
+
+        .blog__textTop {
+            margin-bottom: $mg-10;
+            a {
+                margin-right:$mg-10 ;
+         
+            }
+        }
+        .text__togetther{
+            display: inline-block;
+            margin-bottom: $mg-10;
+            @include styleText($color-black-2, $fs-18, $fw-0);
+            
+        }
+        .blog__textMid{
+            margin-bottom: $mg-20 + 5;
+           span{
+            @include styleText($color-black-8, $fs-13 - 1, $fw-4);
+            letter-spacing: $lt-2 ;
+           }
+            a{
+                letter-spacing: $lt-2 ;
+             &::after{
+                 content: "|";
+                 padding: 0 $pd-5 0 $pd-10 ;
+             }
+            }
+        }
+        p{
+            margin-bottom: $mg-30;
+            line-height: $lh-30;
+            color:$color-white-1;
+        }
+        .blog__readmode{
+            @include styleText($color-black-9, $fs-15 , $fw-0);
+            i{
+                margin-left:$mg-10 ;
+                font-weight: bold;
+            }
+            &:hover{
+                color: $color-black-2;
+            }
+        }
+       .blog__right{
+           padding: $pd-30 0;
+       }
+    }
+}
+
+
+
+//reponsive
+@include responsive("large") {
+    .blog {
+        .title {
+          
+            p {
+                width: 49%;
+            }
+        }
+}
+}
+
+@include responsive("medium") {
+    .blog {
+        .title {
+          
+            p {
+                width: 86%;
+            }
+        }
+}
+}

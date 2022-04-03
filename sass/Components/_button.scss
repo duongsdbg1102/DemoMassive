@@ -1,0 +1,32 @@
+.button{
+    padding: $pd-15 $pd-30;
+    @include styleText($color-white-0, $fs-13 + 1, $fw-0);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    border-radius:0 ;
+    transition: all .3s;
+}
+.btn{
+    &:focus{
+    box-shadow: none;
+}}
+.button--black{ 
+    background-color: $color-black-2;  
+    &:hover{
+        background-color:$color-yellow-0;
+        color:$color-white-0 ;
+    }
+}
+.button--yellow{
+    @include styleText($color-white-0, $fs-13 + 1, $fw-0);
+    background-color: $color-yellow-0;  
+    &:hover{
+        background-color:$color-white-0;
+    }
+}
+@include responsive("medium"){
+    .button{
+        font-size: $fs-13 - 1;
+    }
+}

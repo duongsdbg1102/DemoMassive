@@ -1,0 +1,52 @@
+.feedback {
+    .feedback__content {
+        text-align: center;
+      
+        .feetback__item {
+            
+            img {
+                width: 100px;
+                height: auto;
+                margin: 0 auto;
+                border-radius: 50%;
+                margin-bottom: $mg-20;
+            }
+            p {
+                @include styleText($color-white-1, $fs-15 + 1, $fw-4);
+                line-height: $lh-30;
+                font-style: italic;
+            }
+            h4 {
+                margin: $mg-10 0 0;
+                @include styleText($color-black-2, $fs-13 + 1, $fw-0);
+                letter-spacing: $lt-2;
+                text-transform: uppercase;
+            }
+            h5 {
+                @include styleText($color-white-1, $fs-13 - 1, $fw-0);
+                letter-spacing: $lt-2;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+    }
+}
+@media screen and (min-width:1200px) {
+
+    .feedback {
+        .feedback__content {
+           
+            .feetback__item {
+                
+              
+                p {
+                   width: 60%;
+                   margin: 0 auto $mg-30;
+                }
+
+
+    
+}
+
+
+        }}}

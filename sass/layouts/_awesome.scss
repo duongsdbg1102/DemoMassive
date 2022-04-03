@@ -1,0 +1,29 @@
+.awesome{
+    background-image: url(../img/8.jpg);
+    @extend %styleBackgroud;
+    text-align: center  ;
+    text-transform: uppercase;
+   
+    p{
+        @include styleText($color-yellow-0,$fs-15 + 1,$fw-4);
+        margin: 0;
+        letter-spacing: $lt-2 + 1;
+    }
+    h1{
+        @include styleText($color-white-0,$fs-36,$fw-0);
+        letter-spacing: $lt-2 ;
+        margin: 0;
+        line-height: $lh-1;
+    }
+    .button--yellow{
+        margin-top: $mg-50;
+    }
+}
+@include responsive("medium"){
+    .awesome{
+      
+        h1{
+            font-size: $fs-27 - 1;
+        }
+    }
+}

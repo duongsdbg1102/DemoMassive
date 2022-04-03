@@ -1,0 +1,43 @@
+.carousel{
+    background-image: url(../img/index-banner-2.jpg);
+    
+    height: 100vh;
+   @extend %styleBackgroud;
+   position: relative;
+   .carousel__content{
+       width: 100%;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       text-align: center;
+       h1{
+           @include styleText($color-white-0,$fs-60,$fw-3);
+           line-height: $lh-2;
+           letter-spacing: $lt-6 - 1;
+           margin: 0;
+       }
+       p{
+        @include styleText($color-white-0,$fs-18 + 2,$fw-0);
+        
+        letter-spacing: $lt-6;
+        margin: 0;
+       }
+   }
+}
+@include responsive("medium") {
+    .carousel{
+      
+       .carousel__content{
+          
+           h1{
+              font-size: $fs-30
+               
+           }
+           p{
+           font-size: $fs-18;
+          
+           }
+       }
+    }
+}

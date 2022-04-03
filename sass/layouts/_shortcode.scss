@@ -1,0 +1,101 @@
+.shortcode {
+    background-image: url(../../img/pattern-2.png);
+    @extend %styleBackgroud;
+    background-size: auto;
+    background-repeat: repeat;
+    .shortcode__content {
+        padding: 0 $pd-15;
+        .nav-tabs {
+            .nav-item {
+                margin-left: $mg-20;
+                &:first-child {
+                    margin-left: 0;
+                }
+                .nav-link {
+                    width: 100%;
+                    position: relative;
+                    @include styleText($color-black-10, $fs-36, $fw-0);
+                    padding: $pd-35 $pd-70;
+
+                    background-color: $color-gray-5;
+                    border: none;
+                    border-radius: 0;
+                    transition: all 0.3s;
+                    margin-bottom: 0;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        @include styleTriangle($color-white-0, $sizeTriangle-1);
+                        bottom: -19px;
+                        left: 45%;
+                        opacity: 0;
+                        transition: all 0.3s;
+                    }
+                    &:hover {
+                        background-color: $color-white-0;
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                    &.active {
+                        background-color: $color-white-0;
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .tab-content {
+            padding: $pd-30 0;
+            .shortcode__text {
+                h3 {
+                    @include styleText($color-white-1, $fs-13 + 1, $fw-0);
+                    line-height: $lh-30;
+                    letter-spacing: $lt-2;
+                    margin: 0;
+                }
+                h2 {
+                    @include styleText($color-black-2, $fs-30, $fw-0);
+                    margin-bottom: $mg-50;
+                    letter-spacing: $lt-2;
+                    line-height: $lh-1;
+                }
+                p {
+                    margin: 0;
+                    line-height: $lh-30;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
+//Responsive
+
+@include responsive("medium") {
+    .shortcode {
+        .shortcode__content {
+            .nav {
+                flex-direction: column;
+                .nav-item {
+                    margin-left: 0;
+                    margin-bottom: $mg-10;
+                    text-align: center;
+                    .nav-link {
+                        &::after {
+                            left: 49%;
+                        }
+                    }
+                }
+            }
+            .tab-content {
+                .shortcode__text {
+                    h2{
+                        font-size: $fs-18 + 2;
+                    }
+                }
+            }
+        }
+    }
+}

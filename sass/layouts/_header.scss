@@ -1,0 +1,151 @@
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    .container-fluid {
+        padding: 0;
+    }
+    .header__content {
+        .navbar {
+            padding: 0 $pd-30;
+
+            transition: line-height 0.3s , height .3s;
+
+            .navbar-brand {
+                padding: $pd-5 - 3 0;
+                @include styleText($color-black-5, $fs-18 + 2, $fw-6);
+                // line-height: $lh-100;
+                margin-right: $mg-30;
+
+                transition: line-height 0.3s, height .3s;
+                img {
+                    height: 100%;
+                }
+            }
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-item {
+                        margin-left: $mg-5 - 3;
+                        &.active {
+                            .nav-link {
+                                color: $color-yellow-0;
+                            }
+                        }
+                        .nav-link {
+                            @include styleText($color-white-0, $fs-13, $fw-0);
+                            padding: 0 $pd-10 + 2;
+                            line-height: $lh-100;
+                            text-transform: uppercase;
+                            letter-spacing: $lt-1;
+
+                            span {
+                                margin-left: $mg-5 - 2;
+                            }
+                            i {
+                                font-size: $fs-13 - 1;
+                                margin-right: $mg-5;
+                            }
+                        }
+                        &:hover {
+                            .nav-link {
+                                color: $color-yellow-0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.headerplus {
+    background-color: $color-black-13;
+    line-height: 60px;
+    height: 60px;
+    
+    .navbar-brand {
+        height: 60px;
+        line-height: 60px;
+    }
+}
+// responsive
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        white-space: nowrap;
+    }
+}
+
+@include responsive("medium1") {
+    header {
+        .header__content {
+            .navbar {
+                .navbar-collapse {
+                    position: relative;
+                    top: 0;
+                    .navbar-nav {
+                        background-color: $color-white-0;
+                        .nav-item {
+                            position: relative;
+                            width: 100%;
+                            display: block;
+                            margin-left: 0;
+                            .nav-link {
+                                color: $color-black-0;
+                                padding: $pd-12 $pd-20;
+                                line-height: $lh-20;
+                                border-bottom: 1px solid $color-white-10;
+                                &.nav--plus {
+                                    display: none;
+                                }
+                                span {
+                                    border-left: 1px solid $color-white-10;
+                                    width: 60px;
+                                    height: 45px;
+                                    position: absolute;
+                                    top: 0;
+
+                                    right: 0;
+
+                                    text-align: center;
+                                    font-size: $fs-24 - 2;
+                                    line-height: $lh-45 - 2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive("medium1") {
+    header {
+        .header__content {
+            .navbar {
+                height: 60px;
+                background: $color-black-13;
+                flex-direction: row;
+                .navbar-brand {
+                    display: inline;
+                    width: 0;
+                    max-height: 50px;
+                    line-height: 2.55;
+                    font-size: $fs-24 - 2;
+                    padding: 2px 0;
+                    img {
+                        height: 50px;
+                        position: relative;
+                        top: -5px;
+                        left: 0;
+                    }
+                }
+                .navbar-toggler {
+                    color: white;
+                    position: absolute;
+                    right: 19px;
+                    bottom: 20px;
+                }
+            }
+        }
+    }
+}
