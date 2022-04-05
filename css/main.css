@@ -771,7 +771,7 @@ header {
   .blog .title p {
     width: 86%; } }
 .shortcode {
-  background-image: url(../../img/pattern-2.png);
+  background-image: url(../img/pattern-2.png);
   background-size: auto;
   background-repeat: repeat; }
   .shortcode .shortcode__content {
